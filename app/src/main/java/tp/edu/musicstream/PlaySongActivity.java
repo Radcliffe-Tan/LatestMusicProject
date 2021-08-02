@@ -40,6 +40,7 @@ public class PlaySongActivity extends AppCompatActivity
     Button shuffleBtn;
     Boolean repeatFlag = false;
     Boolean shuffleFlag = false;
+    TextView seekbarDuration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,7 +62,8 @@ public class PlaySongActivity extends AppCompatActivity
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser)
             {
-
+                seekBar.setProgress(progress);
+                seekbarDuration.setText("0:0" + progress/1000);
             }
 
             @Override
@@ -81,6 +83,7 @@ public class PlaySongActivity extends AppCompatActivity
         });
         repeatBtn = findViewById(R.id.repeatBtn);
         shuffleBtn = findViewById(R.id.shuffleBtn);
+        seekbarDuration = findViewById(R.id.seekbarDuration);
     }
 
     //Repeats to call itself forever every 1000 ms
@@ -170,9 +173,6 @@ public class PlaySongActivity extends AppCompatActivity
             displaySongBasedOnIndex(currentIndex);
             playSong(fileLink);
             btnPlayPause.setImageResource(R.drawable.pausebutton);
-            seekbar.setMax(player.getDuration());
-            handler.removeCallbacks(p_bar);
-            handler.postDelayed(p_bar,1000);
         }
 
         public void playPrevious (View view)
@@ -184,9 +184,6 @@ public class PlaySongActivity extends AppCompatActivity
             displaySongBasedOnIndex(currentIndex);
             playSong(fileLink);
             btnPlayPause.setImageResource(R.drawable.pausebutton);
-            seekbar.setMax(player.getDuration());
-            handler.removeCallbacks(p_bar);
-            handler.postDelayed(p_bar,1000);
         }
 
         public void onBackPressed ()

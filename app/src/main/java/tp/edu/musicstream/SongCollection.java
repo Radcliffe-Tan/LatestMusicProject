@@ -38,12 +38,42 @@ public class SongCollection
                 "https://p.scdn.co/mp3-preview/90960a71753aac7a571900182789d9e4bcad86c8?cid=2afe87a64b0042dabf51f37318616965",
                 3.57,
                 R.drawable.waybackhome);
+        Song aintgotnofriends = new Song ("S1006",
+                "Ain't Got No Friends",
+                "Conor Maynard",
+                "https://p.scdn.co/mp3-preview/920d26e7d4c3536a2a612a8bcc7aaafe0fdcaf0a?cid=2afe87a64b0042dabf51f37318616965",
+                2.46,
+                R.drawable.aintgotnofriends);
+
+        Song permissiontodance = new Song ("S1007",
+                "Permission to Dance",
+                "BTS",
+                "https://p.scdn.co/mp3-preview/bd13ce9878c8d1e463494ea24d62e0f37ad035f4?cid=2afe87a64b0042dabf51f37318616965",
+                3.13,
+                R.drawable.permissiontodance);
+
+        Song badhabits = new Song ("S1007",
+                "Bad Habits",
+                "Ed Sheeran",
+                "https://p.scdn.co/mp3-preview/0e537207ad0fff8c9e9011735c665d99b9b58d5e?cid=2afe87a64b0042dabf51f37318616965",
+                3.85,
+                R.drawable.badhabits);
+        Song newpage = new Song ("S1008",
+                "New Page",
+                "INTERSECTION",
+                "https://p.scdn.co/mp3-preview/0c3200b128b32e9d27ddbc7f7ba2a8a7b894ada5?cid=2afe87a64b0042dabf51f37318616965",
+                4.52,
+                R.drawable.newpage);
 
         songs[0] = theWayYouLookTonight;
         songs[1] = billieJean;
         songs[2] = one;
         songs[3] = butter;
         songs[4] = waybackhome;
+        songs[5] = aintgotnofriends;
+        songs[6] = permissiontodance;
+        songs[7] = badhabits;
+        songs[8] = newpage;
     }
 
     public Song getCurrentSong(int currentSongid)
