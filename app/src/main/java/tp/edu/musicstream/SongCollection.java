@@ -1,9 +1,11 @@
 package tp.edu.musicstream;
 
+import java.util.List;
+
 public class SongCollection
 {
     public Song songs[] = new Song[5];
-
+    List<Song> songs1;
     public SongCollection()
     {
         Song theWayYouLookTonight = new Song ("S1001",
@@ -38,7 +40,7 @@ public class SongCollection
                 "https://p.scdn.co/mp3-preview/90960a71753aac7a571900182789d9e4bcad86c8?cid=2afe87a64b0042dabf51f37318616965",
                 3.57,
                 R.drawable.waybackhome);
-        Song aintgotnofriends = new Song ("S1006",
+        /*Song aintgotnofriends = new Song ("S1006",
                 "Ain't Got No Friends",
                 "Conor Maynard",
                 "https://p.scdn.co/mp3-preview/920d26e7d4c3536a2a612a8bcc7aaafe0fdcaf0a?cid=2afe87a64b0042dabf51f37318616965",
@@ -63,17 +65,22 @@ public class SongCollection
                 "INTERSECTION",
                 "https://p.scdn.co/mp3-preview/0c3200b128b32e9d27ddbc7f7ba2a8a7b894ada5?cid=2afe87a64b0042dabf51f37318616965",
                 4.52,
-                R.drawable.newpage);
+                R.drawable.newpage);*/
 
         songs[0] = theWayYouLookTonight;
         songs[1] = billieJean;
         songs[2] = one;
         songs[3] = butter;
         songs[4] = waybackhome;
-        songs[5] = aintgotnofriends;
+        /*songs[5] = aintgotnofriends;
         songs[6] = permissiontodance;
         songs[7] = badhabits;
-        songs[8] = newpage;
+        songs[8] = newpage;*/
+    }
+
+    public List<Song> getSongs()
+    {
+        return songs1;
     }
 
     public Song getCurrentSong(int currentSongid)
@@ -94,7 +101,15 @@ public class SongCollection
         }
         return -1;
     }
-
+    public Song searchSongById(String id){
+        for(int index=0; index < songs.length; index++) {
+            Song tempSong = songs[index];
+            if (tempSong.getId().equals(id)) {
+                return tempSong;
+            }
+        }
+        return null;
+    }
     public int getNextSong(int currentSongIndex)
     {
         if (currentSongIndex >= songs.length-1)
