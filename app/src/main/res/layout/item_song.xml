@@ -13,7 +13,7 @@
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/billie_jean" />
+        app:srcCompat="@drawable/butter"/>
 
     <TextView
         android:id="@+id/titleTxt"

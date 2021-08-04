@@ -13,6 +13,7 @@
         android:theme="@style/Theme.MusicStream">
         <activity android:name=".FavouriteActivity"></activity>
         <activity android:name=".PlaySongActivity" />
+        <activity android:name=".HomeActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

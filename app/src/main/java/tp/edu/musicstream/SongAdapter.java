@@ -51,7 +51,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyView>
         holder.coverImage.setImageResource(song.getDrawable());
         holder.removeBtn.setOnClickListener(v ->
             {
-                MainActivity.favList.remove(position);
+                HomeActivity.favList.remove(position);
                 notifyDataSetChanged();
             }
         );

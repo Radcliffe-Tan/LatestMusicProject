@@ -20,14 +20,14 @@ SongAdapter songAdapter;
         setContentView(R.layout.activity_favourite);
         favList = findViewById(R.id.recycleView);
 
-        songAdapter = new SongAdapter(MainActivity.favList);
+        songAdapter = new SongAdapter(HomeActivity.favList);
         favList.setAdapter(songAdapter);
         favList.setLayoutManager(new LinearLayoutManager(this));
     }
 
     public void ClearAll(View view)
     {
-        MainActivity.favList.clear();
+        HomeActivity.favList.clear();
         songAdapter.notifyDataSetChanged();
     }
 }
