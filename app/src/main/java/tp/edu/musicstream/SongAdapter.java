@@ -23,7 +23,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MyView>
     List<Song> songs;
     Context context;
 
-    public SongAdapter(Activity activity){
+    public SongAdapter(Activity activity)
+    {
         this.activity = activity;
         SongCollection songCollection = new SongCollection();
         songs = songCollection.getSongs();
